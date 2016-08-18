@@ -4,9 +4,7 @@ import java.util.List;
 import org.jdom.*;
 
 public class UnitManager {
-
 	private static UnitManager self = null;
-
 	private UnitMap UM;
 
 	public static UnitManager UM() {
@@ -22,11 +20,9 @@ public class UnitManager {
 	public IUnit getUnit(String uc) {
 		IUnit iu = UM.get(uc);
 		return iu != null ? iu : createUnit(uc);
-
 	}
 
 	private IUnit createUnit(String unitCode) {
-
 		IUnit iu;
 
 		for (Element el : (List<Element>) XMLManager.getXML().getDocument()
@@ -53,12 +49,10 @@ public class UnitManager {
 				UM.put(iu.getUnitCode(), iu);
 				return iu;
 			}
-
 		throw new RuntimeException("DBMD: createUnit : unit not in file");
 	}
 
 	public UnitMap getUnits() {
-
 		UnitMap uM;
 		IUnit iu;
 
@@ -71,5 +65,4 @@ public class UnitManager {
 		} // unit maps are filled with PROXY units
 		return uM;
 	}
-
 }

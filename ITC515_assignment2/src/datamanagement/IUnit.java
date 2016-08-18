@@ -3,7 +3,13 @@ public interface IUnit
 {
   public String getUnitCode();
 
+<<<<<<< HEAD
+public interface IUnit {
+    public String getUnitCode();
+    public String getUnitName();
+=======
 
+>>>>>>> master
 
   public String getUnitName();
 

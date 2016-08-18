@@ -1,7 +1,6 @@
 package datamanagement;
 
 public class cgCTL {
-
 	cgUI CGUI;
 	String cuc = null;
 	Integer currentStudentID = null;
@@ -13,7 +12,6 @@ public class cgCTL {
 	public void execute() {
 		CGUI = new cgUI(this);
 		CGUI.setState1(false);
-
 		CGUI.setState2(false);
 		CGUI.setState3(false);
 		CGUI.setState4(false);
@@ -28,7 +26,6 @@ public class cgCTL {
 	}
 
 	public void unitSelected(String code) {
-
 		if (code.equals("NONE"))
 			CGUI.setState2(false);
 		else {
@@ -48,11 +45,8 @@ public class cgCTL {
 			CGUI.setState4(false);
 			CGUI.setState5(false);
 			CGUI.setState6(false);
-		}
-
-		else {
+		} else {
 			IStudent s = StudentManager.get().getStudent(id);
-
 			IStudentUnitRecord r = s.getUnitRecord(cuc);
 
 			CGUI.setRecord(r);
@@ -61,7 +55,6 @@ public class cgCTL {
 			CGUI.setState5(false);
 			CGUI.setState6(false);
 			changed = false;
-
 		}
 	}
 
@@ -84,7 +77,6 @@ public class cgCTL {
 	}
 
 	public void saveGrade(float asg1, float asg2, float exam) {
-
 		IUnit u = UnitManager.UM().getUnit(cuc);
 		IStudent s = StudentManager.get().getStudent(currentStudentID);
 

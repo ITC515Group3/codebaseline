@@ -5,8 +5,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 	private String uc;
 	private float a1, a2, ex;
 
-	public StudentUnitRecord(Integer id, String code, float asg1, float asg2,
-			float exam) {
+	public StudentUnitRecord(Integer id, String code, float asg1, float asg2, float exam) {
 		this.sid = id;
 		this.uc = code;
 		this.setAsg1(asg1);
@@ -31,7 +30,6 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 	}
 
 	public float getAsg1() {
-
 		return a1;
 	}
 
@@ -41,7 +39,6 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 			throw new RuntimeException("Mark cannot be less than zero or greater than assessment weight");
 		}
 		this.a2 = a2;
-
 	}
 
 	public float getAsg2() {
@@ -49,8 +46,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 	}
 
 	public void setExam(float ex) {
-		if (ex < 0 ||
-				ex > UnitManager.UM().getUnit(uc).getExamWeight()) {
+		if (ex < 0 || ex > UnitManager.UM().getUnit(uc).getExamWeight()) {
 				throw new RuntimeException("Mark cannot be less than zero or greater than assessment weight");
 			}
 		this.ex = ex;
@@ -62,6 +58,5 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 
 	public float getTotal() {
 		return a1 + a2 + ex;
-
 	}
 }
