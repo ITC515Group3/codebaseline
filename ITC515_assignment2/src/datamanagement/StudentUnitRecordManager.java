@@ -11,7 +11,8 @@ public class StudentUnitRecordManager {
     private java.util.HashMap<Integer,StudentUnitRecordList> sr;
 
     public static StudentUnitRecordManager instance() {
-        if (s == null ) s = new StudentUnitRecordManager();
+        if (s == null)
+            s = new StudentUnitRecordManager();
         return s;
     }
 
@@ -64,6 +65,7 @@ public class StudentUnitRecordManager {
         for (Element el : (List<Element>) XMLManager.getXML().getDocument().getRootElement().getChild("studentUnitRecordTable").getChildren("record"))
             if (studentID.toString().equals(el.getAttributeValue("sid")))
                 recs.add(new StudentUnitRecordProxy( new Integer(el.getAttributeValue("sid")), el.getAttributeValue("uid")));
+
         if ( recs.size() > 0 )
             sr.put(studentID, recs); // be careful - this could be empty
 
@@ -80,7 +82,6 @@ public class StudentUnitRecordManager {
                 return;
             }
         }
-
         throw new RuntimeException("DBMD: saveRecord : no such student record in data");
     }
 }

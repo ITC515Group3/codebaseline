@@ -8,7 +8,7 @@ public class AppProperties {
     private Properties properties;
 
     public static AppProperties getInstance() {
-        if (self == null ) {
+        if (self == null) {
             self = new AppProperties();
         }
         return self;
