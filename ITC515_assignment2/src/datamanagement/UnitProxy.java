@@ -5,7 +5,7 @@ public class UnitProxy implements IUnit {
     private String un;
     UnitManager um;
 
-    public UnitProxy( String unitCode, String unitName ) {
+    public UnitProxy(String unitCode, String unitName) {
         this.UC = unitCode;
         this.un = unitName;
         um = UnitManager.UM();
