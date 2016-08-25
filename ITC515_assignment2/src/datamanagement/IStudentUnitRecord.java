@@ -1,17 +1,22 @@
 package datamanagement;
 
 public interface IStudentUnitRecord {
-    public Integer getStudentID();
-    public String getUnitCode();
 
-    public void setAsg1(float mark);
-    public float getAsg1();
+    Integer getStudentID();
 
-    public void setAsg2(float mark);
-    public float getAsg2();
+    String getUnitCode();
 
-    public void setExam(float mark);
-    public float getExam();
+    void setAsg1(float mark);
 
-    public float getTotal();
+    float getAsg1();
+
+    void setAsg2(float mark);
+
+    float getAsg2();
+
+    void setExam(float mark);
+
+    float getExam();
+
+    float getTotal();
 }

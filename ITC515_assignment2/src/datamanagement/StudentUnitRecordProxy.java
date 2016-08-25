@@ -6,7 +6,8 @@ public class StudentUnitRecordProxy implements IStudentUnitRecord {
     private StudentUnitRecordManager mngr;
 
     public StudentUnitRecordProxy(Integer id, String code) {
-        this.studentID = id;this.unitCode = code;
+        this.studentID = id;
+        this.unitCode = code;
         this.mngr = StudentUnitRecordManager.instance();
     }
 

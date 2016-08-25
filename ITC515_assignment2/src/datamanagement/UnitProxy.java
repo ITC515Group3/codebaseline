@@ -3,6 +3,8 @@ package datamanagement;
 public class UnitProxy implements IUnit {
     private String UC;
     private String un;
+
+
     UnitManager um;
 
     public UnitProxy(String unitCode, String unitName) {
@@ -48,6 +50,7 @@ public class UnitProxy implements IUnit {
     }
 
     public float getHdCutoff() {
+
         return um.getUnit(UC).getHdCutoff();
     }
 
@@ -89,5 +92,6 @@ public class UnitProxy implements IUnit {
 
     public void setAssessmentWeights(int asg1Wgt, int asg2Wgt, int examWgt) {
         um.getUnit(UC).setAssessmentWeights(asg1Wgt, asg2Wgt, examWgt);
+
     }
 }
