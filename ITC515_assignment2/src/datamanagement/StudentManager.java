@@ -61,7 +61,8 @@ public class StudentManager {
     }
 
     public StudentMap getStudentsByUnit(String uc) {
-
+        //Variable name should be meaningful
+        // studentMap, iStudent
         StudentMap s = um.get(uc);
         if (s != null) {
             return s;
@@ -76,7 +77,7 @@ public class StudentManager {
             s.put(is.getID(), is);
         }
 
-        um.put( uc, s);
+        um.put(uc, s);
         return s;
     }
 }
