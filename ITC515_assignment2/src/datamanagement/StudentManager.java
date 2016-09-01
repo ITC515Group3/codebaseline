@@ -5,7 +5,14 @@ import java.util.List;
 
 public class StudentManager {
     private static StudentManager self = null;
-    private StudentMap sm;private java.util.HashMap<String, StudentMap> um;
+    //The variable naming conventions is not correct
+    //Variable name should be meaningful
+    //suggest studentMap;
+    private StudentMap sm;
+    //java.util.HashMap should import before use, also the variable name should be meaningful
+    //suggest import java.util.HashMap;
+    //          HashMap<String, StudentMap> unitMap;
+    private java.util.HashMap<String, StudentMap> um;
 
     public static StudentManager get() {
         if (self == null)

@@ -1,6 +1,8 @@
 package datamanagement;
 
 public class Student implements IStudent {
+    //The variable naming conventions is not correct
+    //Variable name should be meaningful
     private Integer id;
     private String fn;
     private String ln;

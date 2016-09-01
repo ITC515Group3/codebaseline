@@ -1,6 +1,8 @@
 package datamanagement;
 
 public interface IStudent {
+    //The modifier public is redundant
+    //Because the methods are using within package suggest make it protect
     public Integer getID();
 
     public String getFirstName();
