@@ -31,6 +31,8 @@ public class StudentManager {
     }
 
     private Element getStudentElement(Integer id) {
+        //for and if should add braces
+        //Variable name should be meaningful
         for (Element el : (List<Element>) XMLManager.getXML().getDocument().getRootElement().getChild("studentTable").getChildren("student"))
             if (id.toString().equals(el.getAttributeValue("sid")))
                 return el;
@@ -38,6 +40,7 @@ public class StudentManager {
     }
 
     private IStudent createStudent(Integer id) {
+        //Variable name should be meaningful iStudent, element, recordList.
         IStudent is;
         Element el = getStudentElement(id);
         if (el != null) {
@@ -58,6 +61,7 @@ public class StudentManager {
     }
 
     public StudentMap getStudentsByUnit(String uc) {
+
         StudentMap s = um.get(uc);
         if (s != null) {
             return s;
