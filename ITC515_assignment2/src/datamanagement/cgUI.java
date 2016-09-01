@@ -7,8 +7,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 import java.awt.Font;
 import java.awt.Color;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.KeyAdapter; //Error:This is unused statement
+import java.awt.event.KeyEvent; //Error:This is unused statement
 
 public class cgUI extends javax.swing.JFrame implements IUnitLister, IStudentLister {
     private cgCTL ctl;
