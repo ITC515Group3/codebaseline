@@ -2,6 +2,7 @@ package datamanagement;
 
 public class StudentUnitRecord implements IStudentUnitRecord {
 	private Integer sid;
+    /* The variable name should meaningful */
 	private String uc;
 	private float a1, a2, ex;
 
