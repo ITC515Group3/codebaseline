@@ -5,6 +5,7 @@ import org.jdom.*;
 
 public class UnitManager {
 	private static UnitManager self = null;
+    /* The variable name should meaningful */
 	private UnitMap UM;
 
 	public static UnitManager UM() {
@@ -29,7 +30,7 @@ public class UnitManager {
 				.getRootElement().getChild("unitTable").getChildren("unit"))
 			if (unitCode.equals(el.getAttributeValue("uid"))) {
 				StudentUnitRecordList slist;
-
+                /* slist is never used*/
 				slist = null;
 				iu = new Unit(el.getAttributeValue("uid"),
 						el.getAttributeValue("name"), Float.valueOf(
@@ -53,7 +54,8 @@ public class UnitManager {
 	}
 
 	public UnitMap getUnits() {
-		UnitMap uM;
+        /* The variable name should meaningful */
+        UnitMap uM;
 		IUnit iu;
 
 		uM = new UnitMap();
