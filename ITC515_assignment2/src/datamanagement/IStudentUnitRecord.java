@@ -1,6 +1,8 @@
 package datamanagement;
 
 public interface IStudentUnitRecord {
+    //The modifier public is redundant
+    //public can be removed
     public Integer getStudentID();
     public String getUnitCode();
 
