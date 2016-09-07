@@ -5,6 +5,7 @@ package datamanagement;
  */
 
 public interface IStudentLister {
+
     public void clearStudents();
-    public void addStudent(IStudent student);
+    public void addStudent(IStudent student);//There should be single blank line between methods
 }
