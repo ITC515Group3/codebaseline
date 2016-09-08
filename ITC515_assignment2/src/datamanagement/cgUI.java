@@ -320,7 +320,7 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister, IStudentLis
         Refresh3();
         String cS = (String) jComboBox2.getSelectedItem();
         if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
-            if (cU.equals((String) jComboBox1.getItemAt(0))) {
+            if (cS.equals((String) jComboBox2.getItemAt(0))) {
                 //Method invokes inefficient Number constructor; use static valueOf instead
                 sid = new Integer(0);
                 ctl.studentSelected(sid);
