@@ -4,13 +4,14 @@ import javax.swing.JLabel;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
+
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+
 //class should start with uppercase letter
-public class cgUI extends javax.swing.JFrame implements IUnitLister,
-        IStudentLister {
+public class cgUI extends javax.swing.JFrame implements IUnitLister, IStudentLister {
     private cgCTL ctl;
     private javax.swing.DefaultComboBoxModel uM;
     private javax.swing.DefaultComboBoxModel rM;
@@ -307,7 +308,7 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         Refresh3();
         clearStudents();
         if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
-            if (cU.equals(jComboBox1.getItemAt(0))) {
+            if (cU.equals((String) jComboBox1.getItemAt(0))) {
                 cU = "NONE";
             }
             ctl.unitSelected(cU);
@@ -319,7 +320,7 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         Refresh3();
         String cS = (String) jComboBox2.getSelectedItem();
         if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
-            if (cS.equals(jComboBox2.getItemAt(0))) {
+            if (cU.equals((String) jComboBox1.getItemAt(0))) {
                 //Method invokes inefficient Number constructor; use static valueOf instead
                 sid = new Integer(0);
                 ctl.studentSelected(sid);
@@ -340,7 +341,7 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         try {
             String s = ctl.checkGrade(f1, f2, f3);
             jLabel5.setText(s);
-        } 
+        }
         catch (RuntimeException re) {
             jlabel6.setText(re.getMessage());
         }
@@ -368,7 +369,7 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         try {
             ctl.saveGrade(asg1, asg2, exam);
             //jButton3ActionPerformed(null);
-        } 
+        }
         catch (RuntimeException re) {
             jlabel6.setText(re.getMessage());
         }
@@ -410,7 +411,8 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         jTextField3.setText(new Float(record.getExam()).toString());
         jLabel5.setText("");
     }
-//Method should start with lowercase letter
+    
+    //Method should start with lowercase letter
     public void Refresh3() {
         jTextField1.setText("");
         jTextField2.setText("");
