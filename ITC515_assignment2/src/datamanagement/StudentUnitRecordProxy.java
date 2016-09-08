@@ -3,6 +3,7 @@ package datamanagement;
 public class StudentUnitRecordProxy implements IStudentUnitRecord {
     private Integer studentID;
     private String unitCode;
+    /* The variable name should meaningful */
     private StudentUnitRecordManager mngr;
 
     public StudentUnitRecordProxy(Integer id, String code) {
