@@ -31,6 +31,8 @@ public class XMLManager {
         }
         catch (JDOMException e) {
             System.err.printf( "%s", "DBMD: XMLManager : init : caught JDOMException\n" );
+            //Avoid throwing raw exception types.
+            //Closing braces should be in new line
             throw new RuntimeException("DBMD: XMLManager : init : JDOMException");}
         catch (IOException e) {
             System.err.printf( "%s", "DBMD: XMLManager : init : caught IOException\n" );
@@ -50,6 +52,7 @@ public class XMLManager {
             fout.close();
         }
         catch (IOException ioe) {
+            //Format string should use %n rather than \n
             System.err.printf( "%s\n", "DBMD : XMLManager : saveDocument : Error saving XML to " + xmlfile);
             throw new RuntimeException("DBMD: XMLManager : saveDocument : error writing to file");
         }
