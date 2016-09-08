@@ -8,7 +8,7 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
+//class should start with uppercase letter
 public class cgUI extends javax.swing.JFrame implements IUnitLister,
         IStudentLister {
     private cgCTL ctl;
@@ -318,9 +318,11 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         String cS = (String) jComboBox2.getSelectedItem();
         if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
             if (cS.equals(jComboBox2.getItemAt(0))) {
+                    //Method invokes inefficient Number constructor; use static valueOf instead
                 sid = new Integer(0);
                 ctl.studentSelected(sid);
             } else {
+                    //Method invokes inefficient Number constructor; use static valueOf instead
                 sid = new Integer(cS.split("\\s")[0]);
             }
             ctl.studentSelected(sid);
@@ -400,7 +402,7 @@ public class cgUI extends javax.swing.JFrame implements IUnitLister,
         jTextField3.setText(new Float(record.getExam()).toString());
         jLabel5.setText("");
     }
-
+//Method should start with lowercase letter
     public void Refresh3() {
         jTextField1.setText("");
         jTextField2.setText("");
