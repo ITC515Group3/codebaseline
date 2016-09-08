@@ -1,6 +1,9 @@
 package datamanagement;
 
 public class ListStudentsCTL {
+    //The variable naming conventions is not correct
+    //Variable name should be meaningful
+    //suggest studentManager
     private StudentManager sm;
 
     public ListStudentsCTL() {
@@ -11,5 +14,8 @@ public class ListStudentsCTL {
         lister.clearStudents();
         StudentMap students = sm.getStudentsByUnit(unitCode);
         for (Integer id : students.keySet()) lister.addStudent(students.get(id));
+        //for loop should add brace
+        for (Integer id : students.keySet())
+            lister.addStudent(students.get(id));
     }
 }

@@ -1,12 +1,12 @@
 package datamanagement;
 
 public class StudentProxy implements IStudent {
-    private Integer I;
-    private String l;
-
-
-    private String Il;
-    private StudentManager lI;
+    //The variable naming conventions is not correct
+    //Variable name should be meaningful
+    private Integer I;  //suggest ID
+    private String l;   //suggest firstName
+    private String Il;  //suggest lastName
+    private StudentManager lI;  //suggest studentManager
 
     public StudentProxy(Integer id, String fn, String Il) {
         this.I = id;
