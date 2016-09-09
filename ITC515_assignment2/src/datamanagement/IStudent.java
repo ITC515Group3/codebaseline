@@ -1,16 +1,22 @@
 package datamanagement;
 
 public interface IStudent {
+    //The modifier public is redundant
+    //Because the methods are using within package suggest make it protect
     public Integer getID();
 
-    public String getFirstName();
-    public void setFirstName(String firstName);
+    String getFirstName();
 
-    public String getLastName();
-    public void setLastName(String lastName);
+    void setFirstName(String firstName);
 
-    public void addUnitRecord(IStudentUnitRecord record);
-    public IStudentUnitRecord getUnitRecord(String unitCode);
+    String getLastName();
 
-    public StudentUnitRecordList getUnitRecords();
+    void setLastName(String lastName);
+
+    void addUnitRecord(IStudentUnitRecord record);
+
+    IStudentUnitRecord getUnitRecord(String unitCode);
+
+    StudentUnitRecordList getUnitRecords();
+
 }

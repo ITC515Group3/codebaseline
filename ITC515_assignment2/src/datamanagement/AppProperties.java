@@ -19,6 +19,7 @@ public class AppProperties {
         try {
             properties.load(new FileInputStream("Properties.prop"));
         }
+        /* e should use exception instead of short word */
         catch (IOException e) {
             throw new RuntimeException("Could not read property file");
         }

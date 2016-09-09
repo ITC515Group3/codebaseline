@@ -1,6 +1,8 @@
 package datamanagement;
 
 public class Student implements IStudent {
+    //The variable naming conventions is not correct
+    //Variable name should be meaningful
     private Integer id;
     private String fn;
     private String ln;
@@ -10,7 +12,9 @@ public class Student implements IStudent {
         this.id = id;
         this.fn = fn;
         this.ln = ln;
-        this.su = su == null ? new StudentUnitRecordList() : su;
+        this.su =
+                su == null ? new StudentUnitRecordList() :
+                        su;
     }
 
     public Integer getID() {
@@ -30,6 +34,8 @@ public class Student implements IStudent {
     }
 
     public void setLastName(String lastName) {
+
+
         this.ln = lastName;
     }
 
@@ -41,7 +47,9 @@ public class Student implements IStudent {
         for (IStudentUnitRecord r : su)
             if (r.getUnitCode().equals(unitCode))
                 return r;
+
         return null;
+
     }
 
     public StudentUnitRecordList getUnitRecords() {

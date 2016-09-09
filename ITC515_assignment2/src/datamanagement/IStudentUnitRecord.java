@@ -1,17 +1,22 @@
 package datamanagement;
 
 public interface IStudentUnitRecord {
+    /*
+    The modifier public is redundant
+    public can be removed
+    */
     public Integer getStudentID();
     public String getUnitCode();
 
-    public void setAsg1(float mark);
-    public float getAsg1();
+    /* Setter and getter method should group*/
+    void setAsg1(float mark);
+    float getAsg1();
 
-    public void setAsg2(float mark);
-    public float getAsg2();
+    void setAsg2(float mark);
+    float getAsg2();
 
-    public void setExam(float mark);
-    public float getExam();
+    void setExam(float mark);
+    float getExam();
 
-    public float getTotal();
+    float getTotal();
 }

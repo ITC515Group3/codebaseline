@@ -2,6 +2,7 @@ package datamanagement;
 
 public class StudentUnitRecord implements IStudentUnitRecord {
 	private Integer sid;
+    /* The variable name should meaningful */
 	private String uc;
 	private float a1, a2, ex;
 
@@ -24,6 +25,8 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 	public void setAsg1(float a1) {
 		if (a1 < 0 ||
 			a1 > UnitManager.UM().getUnit(uc).getAsg1Weight()) {
+            /* Three times throw information is redundant.
+             Suggest use static string */
 			throw new RuntimeException("Mark cannot be less than zero or greater than assessment weight");
 		}
 		this.a1 = a1;
