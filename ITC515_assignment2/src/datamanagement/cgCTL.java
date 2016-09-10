@@ -1,5 +1,6 @@
 package datamanagement;
 
+//Class should not start with small letter
 public class cgCTL {
 
     cgUI CGUI;
@@ -82,6 +83,7 @@ public class cgCTL {
 
     public void saveGrade(float asg1, float asg2, float exam) {
 
+        //unused variable
         IUnit u = UnitManager.UM().getUnit(cuc);
         IStudent s = StudentManager.get().getStudent(currentStudentID);
 
